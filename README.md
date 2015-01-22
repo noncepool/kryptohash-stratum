@@ -1,2 +1,2 @@
 # kryptohash-stratum
-kshake320 kryptohash-stratum
+kryptohash-stratum (kshake320)
