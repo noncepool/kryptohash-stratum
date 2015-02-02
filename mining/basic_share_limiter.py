@@ -155,9 +155,9 @@ class BasicShareLimiter(object):
         
         session['difficulty'] = new_diff
         if job_id == '00':
-            self.connection_ref().rpc('mining.set_difficulty', [0,], is_notification=True)
+            connection_ref().rpc('mining.set_difficulty', [0,], is_notification=True)
         else:
-            self.connection_ref().rpc('mining.set_difficulty', [new_diff,], is_notification=True)
+            connection_ref().rpc('mining.set_difficulty', [new_diff,], is_notification=True)
         connection_ref().rpc('mining.notify', [work_id, prevhash, coinb1, coinb2, merkle_branch, version, nbits, ntime, nTxTime, False,], is_notification=True)
         dbi.update_worker_diff(worker_name, new_diff)
 
